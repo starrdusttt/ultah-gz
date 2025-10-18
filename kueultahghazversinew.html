@@ -1,0 +1,63 @@
+import time
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def kue_ulang_tahun(nama, usia):
+    frames = [
+        """
+        🎂✨🎂✨🎂✨🎂
+       🎂🎂🎂🎂🎂🎂🎂🎂
+      🎂🎂🎂🎂🎂🎂🎂🎂🎂
+     🕯️   🕯️   🕯️   🕯️
+    ~~~~~~~~~~~~~~~~~~~~~
+        """,
+        """
+        ✨🎂✨🎂✨🎂✨
+       🎂🎂🎂🎂🎂🎂🎂🎂
+      🎂🎂🎂🎂🎂🎂🎂🎂🎂
+     💫   💫   💫   💫
+    ~~~~~~~~~~~~~~~~~~~~~
+        """,
+        """
+        🎂✨🎂✨🎂✨🎂
+       🎂🎂🎂🎂🎂🎂🎂🎂
+      🎂🎂🎂🎂🎂🎂🎂🎂🎂
+     ✨   ✨   ✨   ✨
+    ~~~~~~~~~~~~~~~~~~~~~
+        """,
+        """
+        ✨🎂✨🎂✨🎂✨
+       🎂🎂🎂🎂🎂🎂🎂🎂
+      🎂🎂🎂🎂🎂🎂🎂🎂🎂
+     🔥   🔥   🔥   🔥
+    ~~~~~~~~~~~~~~~~~~~~~
+        """
+    ]
+    
+    while True:
+        for i in range(len(frames)):
+            clear_screen()
+            print(f"\n{'='*50}")
+            print(f"    SELAMAT ULANG TAHUN {nama.upper()}!")
+            print(f"         {usia} TAHUN")
+            print(f"{'='*50}")
+            
+            print(frames[i])
+            
+            print(f"\nMake a wish ghaz, have a fabulous birthday!")
+            print(f"sehat terus, bertumbuh, dan berkembang dengan baik")
+            print(f"dari suporter ghazi nomer 5 wkwk")
+            print(f"\n(Press Ctrl+C to stop)")
+            
+            time.sleep(0.5)
+
+# Input menghias diatas kue
+nama = input("Ciee ultah tulis nama dong mau menghias: ")
+usia = input("usianya juga hehe: ")
+
+try:
+    kue_ulang_tahun(nama, usia)
+except KeyboardInterrupt:
+    print("\n\n🎉 Terima kasih sudah merayakan! 🎉")
